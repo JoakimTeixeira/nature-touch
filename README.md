@@ -29,5 +29,7 @@ To get started, fork the repository and then run the following commands:
   - [Gulp SASS](https://www.npmjs.com/package/gulp-sass)
   - [Gulp Sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
 
+## Additional Information
 
+- All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/explore/51145) and [Unsplash](https://unsplash.com/photos/q7pOFt3J0ks)
 
