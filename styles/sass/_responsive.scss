@@ -21,14 +21,24 @@
 }
 
 @media all and (max-width: 620px) {
+  html {
+    font-size: 12px;
+  }
+
   .bg-img {
     display: block;
   }
 
   .swirl-img {
-    width: 40%;
+    width: 30%;
     display: block;
-    left: 50%;
+    left: 55%;
+    top: 65%;
+  }
+}
+
+@media all and (max-width: 300px) {
+  .swirl-img {
     top: 70%;
   }
 }
