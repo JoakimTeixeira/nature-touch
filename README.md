@@ -1,6 +1,6 @@
 # Nature Touch
 
-Site to explore exotic forests
+Site to explore exotic forests.
 
 ![image](https://user-images.githubusercontent.com/12193814/84225212-f1747d80-aab4-11ea-898f-f05470a7b310.png)
 
@@ -31,5 +31,5 @@ To get started, fork the repository and then run the following commands:
 
 ## Additional Information
 
-- All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/) and [Unsplash](https://unsplash.com/)
+All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/) and [Unsplash](https://unsplash.com/).
 
