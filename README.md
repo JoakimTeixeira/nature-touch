@@ -31,5 +31,5 @@ To get started, fork the repository and then run the following commands:
 
 ## Additional Information
 
-- All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/explore/51145) and [Unsplash](https://unsplash.com/photos/q7pOFt3J0ks)
+- All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/) and [Unsplash](https://unsplash.com/)
 
