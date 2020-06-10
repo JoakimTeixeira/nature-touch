@@ -11,6 +11,13 @@ Site to explore exotic forests
 - Added responsiveness
 - Automated SASS compilation and page auto-reload with Gulp
 
+## Running the project
+
+To get started, fork the repository and then run the following commands:
+
+    npm install
+    gulp server
+
 ## Project Dependencies
 - [GSAP](https://greensock.com/gsap/)
   - [GSAP Plugin: CSS Rules](https://greensock.com/cssruleplugin/)
