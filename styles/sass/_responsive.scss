@@ -1,0 +1,34 @@
+@media all and (max-width: 1040px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    height: 100vh;
+    margin: 0 2rem;
+  }
+
+  .bg-img {
+    display: none;
+  }
+
+  .swirl-img {
+    display: block;
+    left: 54%;
+    top: 55%;
+  }
+}
+
+@media all and (max-width: 620px) {
+  .bg-img {
+    display: block;
+  }
+
+  .swirl-img {
+    width: 40%;
+    display: block;
+    left: 50%;
+    top: 70%;
+  }
+}

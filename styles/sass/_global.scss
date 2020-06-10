@@ -1,0 +1,12 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 40%;
+  font-family: "Montserrat";
+}
