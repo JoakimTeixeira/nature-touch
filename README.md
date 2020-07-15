@@ -18,17 +18,6 @@ To get started, fork the repository and then run the following commands:
     npm install
     gulp server
 
-## Project Dependencies
-- [GSAP](https://greensock.com/gsap/)
-  - [GSAP Plugin: CSS Rules](https://greensock.com/cssruleplugin/)
-
-## Developer Dependencies
-- [Gulp](https://gulpjs.com/)
-  - [Gulp Clean CSS](https://www.npmjs.com/package/gulp-clean-css)
-  - [Gulp Rename](https://www.npmjs.com/package/gulp-rename)
-  - [Gulp SASS](https://www.npmjs.com/package/gulp-sass)
-  - [Gulp Sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
-
 ## Additional Information
 
 All project images are free stock photos provided by [Png Arts](https://www.pngarts.com/) and [Unsplash](https://unsplash.com/).
