@@ -1,0 +1,22 @@
+name: Rebase Dependabot PRs
+
+on:
+  push:
+    paths:
+      - .github/workflows/main.yml
+    branches:
+      - main
+
+jobs:
+  rebase-dependabot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make script executable
+        run: chmod +x .github/workflows/rebase-dependabot-prs.sh
+
+      - name: Run script
+        run: .github/workflows/rebase-dependabot-prs.sh
