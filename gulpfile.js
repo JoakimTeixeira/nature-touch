@@ -1,13 +1,13 @@
 const gulp = require("gulp");
 const sync = require("browser-sync").create();
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 
 /**
  * @function
- * @description Allows browser sync.
- * @param {Function} done
+ * @description Initializes a local development server and serves files from the base directory.
+ * @param {Function} done - Callback to signal the end of the task.
  */
 function browserSync(done) {
   sync.init({
@@ -22,8 +22,8 @@ function browserSync(done) {
 
 /**
  * @function
- * @description Reload current page in browser.
- * @param {Function} done
+ * @description Reloads the browser page when file changes are detected.
+ * @param {Function} done - Callback to signal the end of the task.
  */
 function browserSyncReload(done) {
   sync.reload();
@@ -32,44 +32,42 @@ function browserSyncReload(done) {
 
 /**
  * @function
- * @description Covert sass files to a single minified css file.
+ * @description Compiles SASS files into minified CSS, adds source maps, and outputs the result with a `.min` suffix.
  */
-function scss() {
+function minifyScss() {
   return gulp
     .src("./styles/sass/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-    .pipe(
-      rename({
-        suffix: ".min",
-      })
-    )
+    .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./styles/css"))
-    .pipe(sync.stream());
+    .pipe(sync.stream()); // Avoids full page reload when CSS files are updated
 }
 
 /**
  * @function
- * @description Watch source files for auto reload function.
+ * @description Monitors specified files for changes, automatically compiling SASS files and reloading the page.
  */
 function watchFiles() {
-  gulp.watch("./styles/sass/*.scss", scss, browserSyncReload);
+  gulp.watch("./styles/sass/*.scss", minifyScss, browserSyncReload);
   gulp.watch("./styles/css/*.css", browserSyncReload);
   gulp.watch("./*.html", browserSyncReload);
 }
 
 /**
- * @description Gulp tasks
+ * @description Main tasks: runs gulp tasks in sequence and in parallel.
  */
-const build = scss;
+const build = minifyScss;
 const server = gulp.series(
   browserSync,
   gulp.parallel(watchFiles, browserSyncReload)
 );
 
 /**
- * @description Run "gulp build" to generate production files and "gulp server" to start development server, access in port 3000.
+ * @description Exported Tasks:
+ * - `gulp build` - Compile SASS files into minified CSS.
+ * - `gulp server` - Start the development server and watch files for changes.
  */
 exports.build = build;
 exports.server = server;
