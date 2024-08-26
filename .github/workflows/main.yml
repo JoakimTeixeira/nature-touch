@@ -20,7 +20,7 @@ jobs:
       - name: Set up Node.js (latest LTS)
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts'
+          node-version: 'lts/*'
 
       - name: Cache npm modules
         uses: actions/cache@v3
